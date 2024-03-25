@@ -34,13 +34,13 @@ const synad= new Map([
 // dictionary
 
 // random sõna
-function randomSyna() {
+function randomSynaEst() {
     const juhuslikSyna = Math.floor(Math.random() * synad.size);
     const synaKey = Array.from(synad.keys())[juhuslikSyna]; // get key from dictionary
     const synaValue = synad.get(synaKey); //get value from dictionaruy
     document.getElementById("random-syna").innerHTML = synaKey;
-    document.getElementById("kontroll").setAttribute("data-translation", synaValue);
-    document.getElementById("vastus").innerHTML = "";
+    document.getElementById("kontrollEst").setAttribute("data-translation", synaValue);
+    document.getElementById("vastusEst").innerHTML = "";
 }
 
 function checkTranslation() {
