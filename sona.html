@@ -11,23 +11,35 @@
 
     <h1>Tarkvara sõnad</h1>
 
-
-<input type="button" style="width: 50%" value="Juhuslik sõna" onclick="randomSyna()">
-  <div>
-  <span>Sona:</span>
-    <div id="random-syna"></div>
-  </div>
-
-
-
-    <label for="kontroll">Kirjuta sõna vene keeles</label>
-<input type="text" id="kontroll" oninput="checkTranslation()">
+    <table border="1px">
+        <tr>
+            <td>
+                <input type="button" style="width: 50%" value="Juhuslik sõna" onclick="randomSynaEst()">
+                <div>
+                    <span>Sona:</span>
+                    <div id="random-syna"></div>
+                </div>
 
 
-<div id="vastus">   </div>
+
+                <label for="kontrollEst">Kirjuta sõna vene keeles</label>
+                <input type="text" id="kontrollEst" oninput="checkTranslation()">
 
 
-    <input type="button" style="width: 50%" value="Vaata vastust" onclick="answerTest()">
+                <div id="vastusEst">   </div>
+
+
+                <input type="button" style="width: 50%" value="Vaata vastust" onclick="answerTest()">
+
+            </td>
+            <td>
+                <span>Tere</span>
+
+            </td>
+        </tr>
+    </table>
+
+
 </body>
 </div>
 </html>
