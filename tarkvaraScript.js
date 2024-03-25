@@ -31,7 +31,7 @@ const synad= new Map([
         ["valideerimine","валидация"],
 
     ]);
-
+// dictionary
 
 function randomSyna() {
     const juhuslikSyna = Math.floor(Math.random() * synad.size);
