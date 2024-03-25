@@ -33,10 +33,11 @@ const synad= new Map([
     ]);
 // dictionary
 
+// random sõna
 function randomSyna() {
     const juhuslikSyna = Math.floor(Math.random() * synad.size);
-    const synaKey = Array.from(synad.keys())[juhuslikSyna];
-    const synaValue = synad.get(synaKey);
+    const synaKey = Array.from(synad.keys())[juhuslikSyna]; // get key from dictionary
+    const synaValue = synad.get(synaKey); //get value from dictionaruy
     document.getElementById("random-syna").innerHTML = synaKey;
     document.getElementById("kontroll").setAttribute("data-translation", synaValue);
     document.getElementById("vastus").innerHTML = "";
@@ -48,22 +49,22 @@ function checkTranslation() {
     const answer = document.getElementById("vastus");
     answer.style.color = "black";
 
-    if (userInput === correctTranslation) {
+    if (userInput === correctTranslation) { // check for correct translate
         answer.innerHTML = "Õige vastus!";
         answer.style.color = "green";
 
     }
-    else if (userInput === "") {
+    else if (userInput === "") { // if space
         answer.innerHTML = "Kirjuta sõna vene keeles";
         answer.style.color = "black";
     }
-    else {
+    else { // if wrong
         answer.innerHTML = "Vale vastus, proovi uuesti.";
         answer.style.color = "red";
     }
 }
 
-function answerTest() {
+function answerTest() {  // we can get correct answer by button
 
     const correctTranslation = document.getElementById("kontroll").getAttribute("data-translation");
     document.getElementById("vastus").innerHTML = correctTranslation;
