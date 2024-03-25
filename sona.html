@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Tarkvara sõnad</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="tarkvaraScript.js"></script>
+</head>
+<div class="container">
+<body>
+
+    <h1>Tarkvara sõnad</h1>
+
+
+<input type="button" style="width: 50%" value="Juhuslik sõna" onclick="randomSyna()">
+  <div>
+  <span>Sona:</span>
+    <div id="random-syna"></div>
+  </div>
+
+
+
+    <label for="kontroll">Kirjuta sõna vene keeles</label>
+<input type="text" id="kontroll" oninput="checkTranslation()">
+
+
+<div id="vastus">   </div>
+
+
+    <input type="button" style="width: 50%" value="Vaata vastust" onclick="answerTest()">
+</body>
+</div>
+</html>
